@@ -7,6 +7,10 @@
 - link:
     ~/.vimrc: vimrc
     ~/.tmux.conf: tmux.conf
+    ~/.vim/autoload/plug.vim:
+      path: vim-plug/plug.vim
+      create: true
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [vim +'PlugInstall --sync' +qa, Installing Vim plugins]
